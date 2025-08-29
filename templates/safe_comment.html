@@ -1,0 +1,11 @@
+<h1>Yorumlar (GÜVENLİ)</h1>
+<form method="post">
+    <input name="text" placeholder="Yorum yaz" style="width:300px">
+    <button type="submit">Gönder</button>
+</form>
+<ul>
+    {% for c in comments %}
+        <li>{{ c }}</li> <!-- Güvenli: otomatik escape -->
+    {% endfor %}
+</ul>
+<a href="/">Ana sayfa</a>

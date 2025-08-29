@@ -1,0 +1,12 @@
+<h1>Yorumlar (ZAFİYET İÇEREMN)</h1>
+<form method="post">
+    <input name="text" placeholder="Yorum yaz" style="width:300px">
+    <button type="submit">Gönder</button>
+</form>
+<ul>
+    {% for c in comments %}
+        <li>{{ c|safe }}</li> <!-- Zafiyet: escape edilmedi -->
+    {% endfor %}
+</ul>
+<p><small>Deneme: <code>&lt;script&gt;alert('xss')&lt;/script&gt;</code></small></p>
+<a href="/">Ana sayfa</a>
